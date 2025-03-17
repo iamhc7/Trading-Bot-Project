@@ -6,6 +6,9 @@ This formula implies that when the period observed for the EMA is small, the EMA
 As the Short-Term EMA rises, it typically indicates a rise in price. When the Short-Term EMA exceededs the Long-Term EMA, it represents a shift in the market sentiment which is towards a bullish trend.
 Thus, a buy signal is called.
 
+Further Extentions & Future Development
+I intend on applying stochastic models into this trading bot in subsequent versions.
+
 How the code is implemented
 This algorithmic trading project fetches historical data from an API(Application Programming Interface) via Alpha Vantage.
  An API key is needed for this such that the CURL library can initialise a HTTP request to servers which provides the required data.
