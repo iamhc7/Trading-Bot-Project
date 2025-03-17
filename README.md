@@ -1,0 +1,31 @@
+Project Overview & Trading Logic Applied
+This algorithmic trading project utilises the Exponential Moving Average technical indicator to help ascertain whether to buy/sell a stock.
+Exponential Moving Average Calculation: An EMA is a type of moving average that gives more weight to recent prices, making it more sensitive to current market conditions. 
+The formula for the EMA is: EMA(time t) = [Price(time t) * smoothing factor] + [EMA(time: t-1) * (1 - smoothing factor)] where the smoothing factor = 2/n+1 and n is the number of periods for the EMA.
+This formula implies that when the period observed for the EMA is small, the EMA is more sensitive to price changes. This period where EMA is small will be known as the short-term EMA. 
+As the Short-Term EMA rises, it typically indicates a rise in price. When the Short-Term EMA exceededs the Long-Term EMA, it represents a shift in the market sentiment which is towards a bullish trend.
+Thus, a buy signal is called.
+
+How the code is implemented
+This algorithmic trading project fetches historical data from an API(Application Programming Interface) via Alpha Vantage.
+ An API key is needed for this such that the CURL library can initialise a HTTP request to servers which provides the required data.
+
+ Pre-requisites
+ Ensure that the CURL library is installed.
+ It can be found here: https://github.com/curl/curl
+ Ensure that the Nlohmann.json library is installed.
+ It can be found here: https://github.com/nlohmann/json
+
+ Configuring the necessary libraries
+ Alternatively, It can be downloaded using MSYS2 with MinGW64/MinGW32 on windows. Use the corresponding package manager which aligns with your windows specifications.
+ To install nlohmann/json using MSYS2’s pacman package manager, you can run the following command in your MSYS2 terminal: pacman -S mingw-w64-x86_64-nlohmann-json
+ To install cURL using MSYS2, run this command in your MSYS2 terminal: pacman -S mingw-w64-x86_64-curl
+ 
+Running the program
+Ensure that your source file is created and compile it with the following command in the terminal of your IDE/Code Editor: g++ -o source_file source_file.cpp -lcurl
+Ensure that an executable file is created and then type the following command into the terminal of your IDE/Code Editor: .\source_file
+
+Trouble-shooting
+If the header files are not recognised by your compiler, search for the Include folder which should contain the various header files required.
+Include the Path and ensure the compiler recognises the location of your Include folder.
+It may look like this: C:\msys64\mingw64\include
