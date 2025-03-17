@@ -1,0 +1,24 @@
+{
+    "configurations": [
+       {
+          "name": "Win32",
+          "includePath": [
+             "C:/msys64/mingw64/include",        // Include path for MinGW headers
+             "C:/msys64/mingw64/include/curl",   // Correct path to cURL headers            
+             "${workspaceFolder}/**"             // Include the workspace headers
+          ],
+          "defines": [],
+          "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
+          "intelliSenseMode": "gcc-x64",
+          "browse": {
+             "path": [
+                "C:/msys64/mingw64/include",        // MinGW headers
+                "C:/msys64/mingw64/include/curl"    // cURL headers
+             ],
+             "limitSymbolsToIncludedHeaders": true
+          }
+       }
+    ],
+    "version": 4
+ }
+ 
